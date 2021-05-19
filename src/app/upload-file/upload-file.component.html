@@ -1,0 +1,37 @@
+<div class="myStyle">
+    <mat-card class="style-mat-card">
+    <mat-card-actions>
+
+            <div class="form-group">
+                <label for="pdf">Choose PDF</label>
+                <input type="file"
+                       id="pdf"
+                       accept="application/pdf"
+                       required
+                       (change)="onSelectPdf($event)">
+                <label for="image">Choose Image</label>
+                <input type="file"
+                       id="image"
+                       required
+                       accept="image/*"
+                       (change)="onSelectImage($event)">
+                <label for="x">Position X</label>
+                <input type="number"
+                       [(ngModel)]="xAxis"
+                       required
+                       id="x">
+                <label for="y">Position Y</label>
+                <input type="number"
+                       [(ngModel)]="yAxis"
+                       required
+                       id="y">
+            </div>>
+            <button type="submit" (click)="onSubmit()" class="btn-primary" >Submit</button>
+
+    </mat-card-actions>
+</mat-card>
+
+</div>
+
+
+
